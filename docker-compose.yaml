@@ -1,0 +1,14 @@
+version: '3.8'
+services:
+  load_balance_tutorial_app:
+    image: app:1
+    deploy:
+      replicas: 3
+  nginx:
+    image: nginx:stable-alpine
+    ports:
+      - 8080:80
+    volumes:
+      - ./nginx:/etc/nginx
+    entrypoint: ["nginx", "-g", "daemon off;"]
+  
