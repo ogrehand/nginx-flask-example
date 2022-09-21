@@ -1,0 +1,1 @@
+source app.py and nginx.conf from this [link](https://www.geeksforgeeks.org/load-balancing-flask-application-using-nginx-and-docker/)
