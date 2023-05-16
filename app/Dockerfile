@@ -10,10 +10,10 @@ WORKDIR /app
 # COPY requirements.txt .
 
 # Install all the requirements
-RUN pip3 install flask
+RUN pip3 install flask && apk add iperf3
 
 # Copy all the flask project files into the WORKDIR
 COPY . .
 
 # Execute flask application inside the container
-CMD python3 app.py
+CMD ./startup.sh
